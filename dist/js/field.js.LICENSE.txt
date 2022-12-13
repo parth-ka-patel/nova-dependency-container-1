@@ -1,7 +1,8 @@
 /*!
- * vuex v4.0.2
- * (c) 2021 Evan You
- * @license MIT
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
  */
 
 /**

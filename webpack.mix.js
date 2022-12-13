@@ -1,6 +1,5 @@
 let mix = require('laravel-mix')
-let path = require('path')
-
+const path = require('path')
 require('./nova.mix')
 
 mix
@@ -8,3 +7,13 @@ mix
   .js('resources/js/field.js', 'js')
   .vue({ version: 3 })
   .nova('alexwenzel/dependency-container')
+  .alias({
+    '@': 'vendor/laravel/nova/resources/js/',
+  })
+  .webpackConfig({
+    resolve: {
+      alias: {
+        'laravel-nova': path.resolve(__dirname, './node_modules/laravel-nova/dist/index.js'),
+      },
+    },
+  });
